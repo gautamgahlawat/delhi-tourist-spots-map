@@ -1,0 +1,24 @@
+{
+  "name": "delhi-metro-map",
+  "version": "1.0.0",
+  "description": "It Contains the location of all the metro stations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gautamgahlawat/delhi-metro-route-map.git"
+  },
+  "keywords": [
+    "google-map",
+    "api",
+    "metro"
+  ],
+  "author": "Gautam Gahlawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gautamgahlawat/delhi-metro-route-map/issues"
+  },
+  "homepage": "https://github.com/gautamgahlawat/delhi-metro-route-map#readme"
+}
