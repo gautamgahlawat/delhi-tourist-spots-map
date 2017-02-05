@@ -10,66 +10,66 @@
     <title>Neighbourhood Map</title>
 
     <!-- Bootstrap CDN -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
 
     <!-- css link -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <div id="map"></div>
 
-    <div id="wrapper">
+    <div id="mySidenav" class="sidenav">
+        <div id="search-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <!-- Sidebar -->
-        <aside id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Delhi Metro Stations
-                    </a>
-                </li>
-                <li></li>
-            </ul>
-        </aside>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <nav class="container-fluid head-nav-bar">
-                <a id="menu-toggle" href="#" class="btn head-nav-bar-btn">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span></a>
-
-                <!-- <span id="error-message" class="error-message" data-bind="text: errorMessage" style="color:red;"></span> -->
-            </nav>
-            <main class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </main>
+            <input id="filter-textbox" data-bind="textInput: filter, css: { visible: isVisible }"
+                placeholder="Search Station">
+            <!-- <div id="listview" data-bind="css: { visible: isVisible }">
+                <h3 data-bind="text: loadingMsg, visible: loadingMsg"></h3>
+                <ul data-bind="foreach: filterResults">
+                    <li class="station-item">
+                        <a href="#" data-bind="click: $root.clickHandler">
+                            <span class="station-name" data-bind="text: name"></span>
+                            <span class="station-line" data-bind="text: line"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a> -->
         </div>
-        <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#wrapper -->
 
-<!-- scripts -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <span class ="hamburger-icon"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
+
+    <!-- scripts -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxpE3Gyxl2lXG5wWbwAcH6PtLmseqM4Vg&callback=initMap"
+    async defer ></script>
+
+    <!-- bootstrap js CDN
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+    <!-- Jquery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <!-- Knockout CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxpE3Gyxl2lXG5wWbwAcH6PtLmseqM4Vg&v=3&callback=initMap">
-    </script>
-
-    <!-- Menu Toggle Script -->
+    <!-- Menu Toggle Script -- -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
     </script>
 
 </body>
