@@ -7,48 +7,43 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript,google-map,api">
     <meta name="author" content="Gautam Gahlawat">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neighbourhood Map</title>
+    <title>Delhi Tourist Spots</title>
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <!-- css link -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div id="map"></div>
+<body data-bind="css: toggleMenu">
+    <div class="header">
+        <a href="#" class="menu-icon-link" data-bind="click: function(){menuStatus(!menuStatus())}">
+            <i class="fa fa-bars fa-3x menu" aria-hidden="true" ></i>
+        </a>
 
-    <div id="mySidenav" class="sidenav">
-        <div id="search-nav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h1 class="header-title">Delhi Tourist Spots</h1>
+    </div>
 
-            <input id="filter-textbox" data-bind="textInput: filter, css: { visible: isVisible }"
-                placeholder="Search Station">
-            <!-- <div id="listview" data-bind="css: { visible: isVisible }">
-                <h3 data-bind="text: loadingMsg, visible: loadingMsg"></h3>
-                <ul data-bind="foreach: filterResults">
-                    <li class="station-item">
-                        <a href="#" data-bind="click: $root.clickHandler">
-                            <span class="station-name" data-bind="text: name"></span>
-                            <span class="station-line" data-bind="text: line"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div> -->
-            <!-- <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a> -->
+    <div class="slide-menu">
+        <div class="form-group">
+            <input class="form-control" type="text" data-bind="textInput: filterText, valueUpdate: 'keyup'" placeholder="Filter Locations">
+        </div>
+        <div class="list-group" data-bind="foreach: filter()">
+            <a class="list-group-item" href="#" data-bind="text: name, click: $parent.showInfoWindowWhenClicked,  css: {active: $index() === $parent.activeListItemIndex()}"></a>
         </div>
     </div>
 
-    <span class ="hamburger-icon"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <div class="map"></div>
+
+
 
 
     <!-- scripts -->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxpE3Gyxl2lXG5wWbwAcH6PtLmseqM4Vg&callback=initMap"
-    async defer ></script>
+    async defer onerror="initMapLoadError()"></script>
 
     <!-- bootstrap js CDN
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
@@ -64,7 +59,7 @@
     <!-- Menu Toggle Script -- -->
     <script>
     function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "280px";
     }
 
     function closeNav() {

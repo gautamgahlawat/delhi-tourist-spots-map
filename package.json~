@@ -1,19 +1,19 @@
 {
   "name": "delhi-tourist-spots-map",
   "version": "1.0.0",
-  "description": "It Contains the location of all the tourist sposts in Delhi",
+  "description": "It Contains the location of all the tourist spots in Delhi",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gautamgahlawat/delhi-metro-route-map.git"
+    "url": "git+https://github.com/gautamgahlawat/delhi-tourist-spots-map.git"
   },
   "keywords": [
     "google-map",
     "api",
-    "tourist"
+    "tourism"
   ],
   "author": "Gautam Gahlawat",
   "license": "ISC",

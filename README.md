@@ -1,1 +1,1 @@
-# delhi-metro-route-map
+# delhi-tourist-spots-map
