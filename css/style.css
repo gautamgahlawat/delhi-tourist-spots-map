@@ -26,7 +26,6 @@ a:hover h2 {
 
 h1 {
     display: inline-block;
-    font-weight: 100;
     margin: 0 0 0 0.5em;
 }
 
@@ -36,7 +35,7 @@ h2 {
 }
 
 .header {
-    background: #111;
+    background: #5c1410;
     color: #fff;
     position: fixed;
     top: 0;
@@ -52,14 +51,14 @@ h2 {
 .slide-menu {
     position: fixed !important;
     position: absolute;
-    top: 3.2em;
+    top: 3.4em;
     padding: 1em;
-    background: #111;
-    opacity: 0.8;
-    height: 100%;
+    background: #a3ccff;;
+    opacity: 0.9;
+    /*height: 100%;*/
     width: 15em;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
     z-index: 1;
     overflow: auto;
 }
@@ -69,6 +68,23 @@ h2 {
     transition: transform 0.2s;
 }
 
+.form-control {
+    color: #252424;
+    height: 45px;
+    font-size: 20px;
+    border: 1px solid #565bff;
+    border-radius: 5px;
+}
+
+a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #aacffd;
+}
+
+.list-group-item {
+    border: 1px solid #aacffc;
+}
 
 .entry {
     border-bottom: 1px solid #ddd;
@@ -79,7 +95,7 @@ h2 {
 .map {
     position:fixed !important;
     position:absolute;
-    top: 3.5em;
+    top: 3.4em;
     right:0;
     bottom:0;
     left: 0;
@@ -98,6 +114,10 @@ h2 {
 @media screen and (max-width: 400px) {
     .header-title {
         font-size: 1.5em !important;
+    }
+
+    .menu {
+        font-size: 1.5em;
     }
 
     h4 {

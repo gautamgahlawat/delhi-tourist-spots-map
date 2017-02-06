@@ -37,8 +37,8 @@ var Model = {
             wiki : null
         },
         {
-            name: "Akshardham",
-            location: { lat: 28.612706, lng: 77.277145},
+            name: "Red Fort",
+            location: { lat: 28.656173, lng: 77.241011},
             wiki : null
         },
         {
