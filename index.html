@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Delhi Metro Stations">
+    <meta name="description" content="google maps">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript,google-map,api">
     <meta name="author" content="Gautam Gahlawat">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,17 @@
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-
+    <!-- fontawesome CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <!-- css link -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
+
+<!-- ******body starts******  -->
 <body data-bind="css: toggleMenu">
     <div class="header">
-        <a href="#" class="menu-icon-link" data-bind="click: function(){menuStatus(!menuStatus())}">
+        <a href="" class="menu-icon-link" data-bind="click: function(){menuStatus(!menuStatus())}">
             <i class="fa fa-bars fa-3x menu" aria-hidden="true" ></i>
         </a>
 
@@ -38,15 +40,10 @@
     <div class="map"></div>
 
 
-
-
     <!-- scripts -->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxpE3Gyxl2lXG5wWbwAcH6PtLmseqM4Vg&callback=initMap"
-    async defer onerror="initMapLoadError()"></script>
-
-    <!-- bootstrap js CDN
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    async defer onerror="alert('Unable to Load Google Map, Please check your Internet Connection.')"></script>
 
     <!-- Jquery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -54,18 +51,17 @@
     <!-- Knockout CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 
+    <!-- main js file -->
     <script type="text/javascript" src="js/app.js"></script>
 
     <!-- Menu Toggle Script -- -->
-    <script>
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "280px";
-    }
+    <!-- // function openNav() {
+    // document.getElementById("mySidenav").style.width = "280px";
+    // }
 
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
-    </script>
+    // function closeNav() {
+    // document.getElementById("mySidenav").style.width = "0";
+    // } -->
 
 </body>
 </html>
