@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/gautamgahlawat/delhi-tourist-spots-map/issues"
   },
-  "homepage": "https://github.com/gautamgahlawat/delhi-tourist-spots-map#readme"
+  "homepage": "https://github.com/gautamgahlawat/delhi-tourist-spots-map#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-inline-css": "^0.1.5",
+    "load-grunt-tasks": "^3.5.2"
+  }
 }
