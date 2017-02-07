@@ -4,30 +4,6 @@ var map,
     markers = ko.observableArray(),
     vmodel; //This variable holds viewModel
 
-// InitMap initializes map and apply KO. binding to the viewmodel
-function initMap() {
-    map = new google.maps.Map(document.getElementsByClassName('map')[0], {
-        zoomControl: true,
-    });
-
-
-     // Add mapBounds property to the window object
-    window.mapBounds = new google.maps.LatLngBounds();
-
-    //infowindow
-    infoWindow = new google.maps.InfoWindow({maxWidth: 250});
-
-
-    //Invoking createMarkers function
-    createMarkers(Model.touristPlaces);
-
-    vmodel = new viewModel();
-
-    // apllyy binding
-    ko.applyBindings(vmodel);
-
-}
-
 // This object is our model,  it holds the places which are needed to show on map
 var Model = {
     // It hold the current place when marker/list is clicked
@@ -97,6 +73,29 @@ var Model = {
         },
     ]
 };
+
+// InitMap initializes map and apply KO. binding to the viewmodel
+function initMap() {
+    map = new google.maps.Map(document.getElementsByClassName('map')[0], {
+        zoomControl: true,
+    });
+
+
+     // Add mapBounds property to the window object
+    window.mapBounds = new google.maps.LatLngBounds();
+
+    //infowindow
+    infoWindow = new google.maps.InfoWindow({maxWidth: 250});
+
+
+    //Invoking createMarkers function
+    createMarkers(Model.touristPlaces);
+
+    vmodel = new viewModel();
+
+    // apllyy binding
+    ko.applyBindings(vmodel);
+}
 
 // This function creates markers on the map
 function createMarkers(touristPlaces) {
