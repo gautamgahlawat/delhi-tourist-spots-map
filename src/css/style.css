@@ -1,10 +1,4 @@
-*,
-*:after,
-*:before: {
-    box-sizing: inherit;
-}
-
-html {
+html, * {
     box-sizing: border-box;
 }
 
@@ -20,18 +14,13 @@ a.menu {
     color: #111;
 }
 
-a:hover h2 {
+/*a:hover h2 {
     text-decoration: underline;
-}
+}*/
 
 h1 {
     display: inline-block;
     margin: 0 0 0 0.5em;
-}
-
-h2 {
-    font-weight: 400;
-    margin: 0;
 }
 
 .header {
@@ -65,7 +54,7 @@ h2 {
 
 .menu-hidden .slide-menu {
     transform: translate3d(-15em, 0, 0);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .form-control {
@@ -100,10 +89,6 @@ a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:ho
     bottom:0;
     left: 0;
 }
-
-/*.menu {
-    color: white;
-}*/
 
 .infowindow {
     text-align: center;
