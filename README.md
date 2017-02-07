@@ -13,7 +13,7 @@ All the associated files like: *gruntfile*, *license*, *readme* and *package.jso
 
 ## Installation Instructions
 
-Try the LIVE (fast) version  [here](https://gautamgahlawat.github.io/delhi-tourist-spots-map/dist/index.html)
+Try the LIVE (fast) version  [here](https://gautamgahlawat.github.io/delhi-tourist-spots-map/dist/index.html){:target="_blank"}
 
 **STEPS**
 
@@ -49,4 +49,4 @@ Option 2
 
 Change whatever and do whatever you want with it. Make it your own. :)
 
-Licensed under MIT License detail [here](https://github.com/gautamgahlawat/delhi-tourist-spots-map/blob/master/LICENSE)
+Licensed under MIT License detail [here](https://github.com/gautamgahlawat/delhi-tourist-spots-map/blob/master/LICENSE){:target="_blank"}
