@@ -116,8 +116,8 @@ a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:ho
         font-size: 1.5em !important;
     }
 
-    .a >.h1 {
-        font-size: 1.5em;
+    a > .menu {
+        font-size: 1.5em !important;
     }
 
     h4 {
