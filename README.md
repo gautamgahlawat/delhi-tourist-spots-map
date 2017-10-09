@@ -37,7 +37,7 @@ Option 2
 3. Wikipedia api
 4. Grunt js
 
-## Resources
+## Sources
 
 - For gathering the lat lng - http://www.latlong.net/
 - Live search - http://opensoul.org/2011/06/23/live-search-with-knockoutjs/
